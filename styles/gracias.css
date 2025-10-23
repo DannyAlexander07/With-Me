@@ -1,0 +1,243 @@
+/* Ubicacion: styles/gracias.css */
+:root {
+    --rosa: #dcafef;
+    --azul: #20214c;
+    --blanco: #fff;
+
+}
+
+
+@font-face {
+  font-family: 'Rosmatika';
+  src: url('../recursos/fonts/Rosmatika.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Rosmatika', sans-serif;
+    background: linear-gradient(-45deg, #6e4a40, #e73c7e, #273c43, #dcafef);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background-color: #ffffff80;
+    border-radius: 50%;
+    opacity: 0;
+    animation: float 25s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Thank you card with glassmorphism effect */
+.thank-you-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    animation: fadeInCard 1s ease-out forwards;
+    opacity: 0;
+    z-index: 1;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.checkmark-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: var(--verde);
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px var(--verde);
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 50px var(--verde);
+    }
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--blanco);
+    margin-bottom: 15px;
+    animation: fadeInText 1s ease-out 1s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.message {
+    font-size: 1.1rem;
+    color: var(--blanco);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    animation: fadeInText 1s ease-out 1.2s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background-color: var(--verde);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInText 1s ease-out 1.4s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.btn-back:hover {
+    background-color: var(--verde-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .thank-you-card {
+        padding: 40px 20px;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .message {
+        font-size: 1rem;
+    }
+    .checkmark-container, .checkmark {
+        width: 80px;
+        height: 80px;
+    }
+    @keyframes fill {
+        100% {
+            box-shadow: inset 0px 0px 0px 40px var(--verde);
+        }
+    }
+}

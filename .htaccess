@@ -1,0 +1,34 @@
+# .htaccess
+# Activa el motor de reescritura de URLs
+RewriteEngine On
+
+# ----------------------------------------------------------------------
+# OPCIONAL PERO RECOMENDADO: Forzar HTTPS y www
+# Esto asegura que todos los visitantes terminen en https://www.estudiowithme.com
+# ----------------------------------------------------------------------
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ----------------------------------------------------------------------
+# REGLA 1: Redirigir permanentemente /index.html a la raíz /
+# ----------------------------------------------------------------------
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# ----------------------------------------------------------------------
+# REGLA 2: Redirigir permanentemente URLs con /pages/ y .html a la versión limpia
+# Ejemplo: /pages/branding.html -> /branding
+# ----------------------------------------------------------------------
+RewriteCond %{THE_REQUEST} \s/+pages/(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# ----------------------------------------------------------------------
+# REGLA 3: Reescritura interna para que el servidor entienda la URL limpia
+# Cuando alguien pide /branding, el servidor le entrega /pages/branding.html sin cambiar la URL
+# ----------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/pages%{REQUEST_URI}.html -f
+RewriteRule ^([^\.]+)$ /pages/$1.html [L]
