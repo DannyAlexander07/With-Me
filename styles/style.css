@@ -135,7 +135,7 @@ img{
     text-decoration: none;
     color: var(--azul);
     font-weight: 900;
-    font-family: 'Rosmatika', sans-serif;
+    font-family: 'HarmoniaSansProBlack', sans-serif;
     font-size: 1.2rem;
     background-color: var(--rosa);
     padding: 0.5rem 1.5rem;
@@ -546,10 +546,6 @@ img{
     font-family: 'HarmoniaSansProBlack', sans-serif;
 }
 
-/* =====================
-   CARRUSEL (WOW EFFECT)
-   ===================== */
-
 .carrusel-container {
     position: relative;
     width: 100%;
@@ -605,7 +601,7 @@ img{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(32, 33, 76, 0.7);
+    background: var(--azul);
     border: none;
     color: var(--blanco);
     cursor: pointer;
@@ -1114,21 +1110,23 @@ img{
     }
 
     .titulo{
-        font-size: 5.2rem;
+        font-size: 7rem;
         text-align: left;
-        font-weight: 900;
+        font-weight: 800;
+        line-height: 0.9;
     }
 
     .me{
-        display: block;
+        display: inline-block;
         margin: 0;
         padding: 0;
+        margin-top: -0.7rem;
     }
 
     .texto{
         text-align: left;
         margin: 2rem 0.1rem 1rem;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .header-mobile {
@@ -1251,21 +1249,21 @@ img{
     }
 
     .boton-grupo2{
-        width: 12rem;
+        width: 13rem;
         margin-left: -0.5rem;
     }
 
     .contenedor1{
-        width: 110%;
+        width: 90%;
     }
 
     .imagen1{
-        width: 70%;
+        width: 60%;
         border-radius: 1rem;
     }
 
     .imagen2{
-        width: 110%;
+        width: 90%;
         height: 31rem;
         border-radius: 1rem;
     }
@@ -1286,7 +1284,7 @@ img{
     }
 
     .texto-grupo2{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 400;
     }
 
@@ -1307,6 +1305,7 @@ img{
     .texto-grupo3{
         font-size: 3.9rem;
         line-height: 0.9;
+        letter-spacing: -3px;
     }
 
     .img-caja-grupo3{

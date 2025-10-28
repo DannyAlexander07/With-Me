@@ -68,7 +68,7 @@ img{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 45vh;
+    height: 46vh;
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -6rem;
+    margin-top: -8rem;
 }
 
 .titulo{
@@ -901,6 +901,11 @@ img{
     .grupo2{
         padding: 2rem 0 5rem;
     }
+    
+    .subtitulo{
+        width: 950px;
+        font-size: 3.5rem;
+    }
 
     .parte{
         flex-direction: row;
@@ -918,7 +923,9 @@ img{
 
     .select{
         font-size: 1.1rem;
+        background-size: 1.7rem;
     }
+    
 
     .option{
         font-size: 1rem;

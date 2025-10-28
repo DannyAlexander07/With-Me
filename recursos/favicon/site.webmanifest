@@ -1,28 +1,24 @@
 {
-  "name": "With Me Estudio",
-  "short_name": "With Me",
-  "description": "Agencia de branding y diseño gráfico en Lima. Creamos marcas con propósito, identidad visual y estrategia profesional.",
+  "name": "With Me - Agencia Digital Creativa",
+  "short_name": "WithMe",
+  "description": "Agencia digital creativa especializada en branding, social media, diseño web y creación de contenido. Transformamos ideas en resultados.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#20214c",
   "theme_color": "#20214c",
+  "background_color": "#ffffff",
   "icons": [
     {
-      "src": "/recursos/favicon/web-app-manifest-192x192.png",
+      "src": "recursos/favicon/web-app-manifest-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
-      "src": "/recursos/favicon/web-app-manifest-512x512.png",
+      "src": "recursos/favicon/web-app-manifest-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "/recursos/favicon/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

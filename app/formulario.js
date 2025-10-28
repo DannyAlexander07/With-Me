@@ -112,7 +112,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (formIsValid) {
-            formulario.submit();
+            const loaderOverlay = document.getElementById('loader-overlay');
+            const submitButton = formulario.querySelector('input[type="submit"]');
+
+            loaderOverlay.style.display = 'flex';
+            submitButton.disabled = true;
+            submitButton.value = 'Enviando...';
+
+            setTimeout(() => {
+                formulario.submit();
+            }, 2000);
         }
     });
 
