@@ -332,7 +332,7 @@ img{
 }
 
 .bienvenido{
-    font-weight: 700;
+    font-weight: 900;
     font-size: 0.8rem;
     font-family: 'HarmoniaSansProBlack', sans-serif;
 }
@@ -392,9 +392,11 @@ img{
 }
 
 .texto-grupo3{
-    font-size: 1.01rem;
+    font-size: 1.25rem;
     text-align: center;
     font-weight: 900;
+    font-family: 'HarmoniaSansProBlack', sans-serif;
+    line-height: 0.9;
 }
 
 .parrafo-grupo{
@@ -431,6 +433,7 @@ img{
     justify-content: center;
     align-items: center;
     border-radius: 0.8rem;
+    line-height: 0.9;
 }
 
 .contiene:hover{
@@ -1304,7 +1307,7 @@ img{
 
     .texto-grupo3{
         font-size: 3.9rem;
-        line-height: 0.9;
+        line-height: 0.85;
         letter-spacing: -3px;
     }
 
@@ -1362,7 +1365,8 @@ img{
     }
 
     .carrusel-container {
-        height: 500px;
+        height: 600px;
+        perspective: 1100px;
     }
 
     .carrusel-slide {

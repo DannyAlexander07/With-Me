@@ -70,7 +70,7 @@ img{
 
 .grupo1{
     grid-area: parte1;
-    background-image: url(../recursos/Mobile/img/bannerMobile.png);
+    background-image: url(../recursos/Desktop/img/BANNERServicios.png);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1044,7 +1044,7 @@ img{
 @media (min-width: 1024px) {
 
     .grupo1{
-        background-image: url(../recursos/Desktop/img/bannerDesktop.png);
+        background-image: url(../recursos/Desktop/img/BANNERServicios.png);
         height: 60vh;
     }
 

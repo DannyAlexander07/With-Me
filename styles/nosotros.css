@@ -69,7 +69,7 @@ img{
 
 .grupo1{
     grid-area: parte1;
-    background-image: url(../recursos/Mobile/img/bannerMobile.png);
+    background-image: url(../recursos/Desktop/img/BANNERServicios.png);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -324,6 +324,7 @@ img{
     text-align: center;
     row-gap: 1.5rem;
     margin: 1rem auto;
+    font-family: 'HarmoniaSansProBlack', sans-serif;
 }
 
 .encaje{
@@ -372,6 +373,7 @@ img{
     font-family: 'Rosmatika', sans-serif;
     text-align: center;
     margin: 1.5rem auto 1rem;
+    line-height: 0.9;
 }
 
 .cajaServicios{
@@ -389,7 +391,7 @@ img{
 }    
 
 .servicios-texto{
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 800;
     color: var(--rosa);
     font-family: 'HarmoniaSansProBlack', sans-serif;
@@ -445,7 +447,7 @@ img{
 
 .carrusel-nosotros-button {
     position: absolute;
-    top: 50%;
+    top: 56%;
     transform: translateY(-50%);
     background-color: var(--azul);
     border: none;
@@ -467,11 +469,11 @@ img{
 }
 
 .carrusel-nosotros-button--left {
-    left: 0.6rem;
+    left: 0.4rem;
 }
 
 .carrusel-nosotros-button--right {
-    right: 0.6rem;
+    right: 0.4rem;
 }
 
 .carrusel-nosotros-button img {
@@ -867,7 +869,7 @@ img{
 @media (min-width: 1024px) {
 
     .grupo1{
-        background-image: url(../recursos/Desktop/img/bannerDesktop.png);
+        background-image: url(../recursos/Desktop/img/BANNERServicios.png);
         height: 50vh;
     }
 
@@ -1061,15 +1063,15 @@ img{
     .carrusel-nosotros-button {
         width: 4rem;
         height: 4rem;
-        top: 55%;
+        top: 60%;
     }
 
     .carrusel-nosotros-button--left {
-        left: 8rem;
+        left: 9.5rem;
     }
 
     .carrusel-nosotros-button--right {
-        right: 8rem;
+        right: 9.5rem;
     }
 
     .footer{
